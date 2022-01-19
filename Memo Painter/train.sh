@@ -1,0 +1,1 @@
+python main.py --color_info dist --color_feat_dim 313 --mem_size 982 --top_k 256  --train_data_path  ./dataset/pokerman/pokemon_jpg/pokemon_jpg/train --test_data_path ./dataset/pokerman/pokemon_jpg/pokemon_jpg/test --alpha 0.3 --color_thres 0.5 --epoch 60 --gpu 1 --result_path ./new_gen --test_freq 1 --batch_size 2
