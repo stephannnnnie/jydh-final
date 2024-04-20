@@ -6,29 +6,29 @@ Here is the final project of CS308 Computer Vision in SUSTech. We chose *Colorin
 
 
 
-1. Train MemoPainter and compare results with pretrained model
-2. Alabtion experiment of Memory network
-3. Changing generator to FCN to see how well the memory network works
-4. Turning parameters to evaluate robustness of MemoPainter
-5. Analysis on Threshold Triplet Loss (TTL)
+1. Train MemoPainter and compare results with the pre-trained model
+2. Ablation experiment of Memory network
+3. Changing the generator to FCN to see how well the memory network works
+4. Turning parameters to evaluate the robustness of MemoPainter
+5. Analysis of Threshold Triplet Loss (TTL)
 6. Compare results of MemoPainter to CIC and Deep Prior
 
 
 
-The dataset we used is pokemon, which can be gained from https://www.kaggle.com/kvpratama/pokemon-images-dataset.
+The dataset we used is Pokemon, which can be found at https://www.kaggle.com/kvpratama/pokemon-images-dataset.
 
 
 
 ## MemoPainter
 
-We first got recured codes from https://github.com/dongheehand/MemoPainter-PyTorch. You can use mode_with_memory.py to train original MemoPainter and FCN generator MemoPainter (change generator as follows). Training lines are in train.sh.
+We first got recured codes from https://github.com/dongheehand/MemoPainter-PyTorch. You can use mode_with_memory.py to train the original MemoPainter and FCN generator MemoPainter (change generator as follows). Training lines are in train.sh.
 
 ```python
 # generator = unet_generator(args.input_channel, args.output_channel, args.n_feats, args.color_feat_dim)
 generator = VGG16(args.input_channel, args.output_channel, args.n_feats, args.color_feat_dim).to(device)
 ```
 
-Also, you can use mode.py to train the network without memory network. Here are some of our visualization results.
+Also, you can use mode.py to train the network without a memory network. Here are some of our visualization results.
 
 ![image-20220119094912177](https://github.com/stephannnnnie/jydh-final/blob/main/images/image-20220118103920239.png)
 
